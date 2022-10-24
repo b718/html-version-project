@@ -1,0 +1,64 @@
+<!DOCTYPE html>                            
+<html lang="en">      
+    <head>            
+        <meta charset="utf-8">           
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="web-scrape.css">
+        <script src="./js/newScripts.js"></script>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <div className="App">
+            <div className="urlEnter">
+              <h1>Please Enter A URL</h1>
+              <input id="urlID" type="text"></input>
+              <button id="urlButton" type="button">
+                Submit
+              </button>
+              <h2 id="urlHeader"> Current URL: </h2>
+            </div>
+      
+            <div className="wordEnter">
+              <h1>Please Enter A Word</h1>
+              <input id="wordID" type="text"></input>
+              <button id="wordButton" type="button">
+                Submit
+              </button>
+              <h2 id="wordHeader"> Current Word: </h2>
+            </div>
+      
+            <button id="resButton" className="showOutput">
+              Results
+            </button>
+      
+            <div className="outputWindow">
+              <h1></h1>
+            </div>
+          </div>
+
+          <script>
+            const urlElem = document.getElementById("urlButton");
+            urlElem.addEventListener("click", function() {
+              const urlREF = document.getElementById("urlID").value;
+              console.log(urlREF);
+              url = urlREF;
+              console.log(url);
+              document.getElementById("urlHeader").innerHTML = "Current URL: " + url;
+            })
+            
+            const btnElem = document.getElementById("wordButton");
+            btnElem.addEventListener("click", function() {
+              const wordREF = document.getElementById("wordID").value;
+              word = wordREF;
+              document.getElementById("wordHeader").innerHTML = "Current Word: " + word;
+            })
+
+            const resElem = document.getElementById("resButton");
+            resElem.addEventListener("click", function() {
+         
+            })
+
+          </script>
+    </body>
+</html>
